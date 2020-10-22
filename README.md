@@ -1,5 +1,7 @@
 ## git-multi-profile
 
+Easily work with multiple git accounts.
+
 Automatically use the correct SSH key and user profile for git operations without having to remember any extra steps. Once configured, it just works. 
 
 No more cases of mistaken identity or "Permission Denied" when trying to access a repo when you have multiple git accounts.
@@ -20,7 +22,7 @@ Set up
 -----------------
 ```shell
 # Download shell script
-curl https://raw.githubusercontent.com/AdaptableBytes/git-multi-profile/main/git-init
+curl -Lo git-init https://raw.githubusercontent.com/AdaptableBytes/git-multi-profile/main/shell-scripts/git-init
 
 # Make available as shell command
 sudo cp git-init /usr/local/bin && sudo chmod +x /usr/local/bin/git-init
