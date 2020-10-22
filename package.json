@@ -1,0 +1,17 @@
+{
+  "name": "git-multi-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "bin/git-multi-profile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adaptable Bytes LLC",
+  "license": "MIT",
+  "dependencies": {
+    "git-url-parse": "^11.3.0",
+    "gitconfig": "^2.0.8"
+  }
+}
