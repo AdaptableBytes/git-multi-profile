@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/AdaptableBytes/git-multi-profile/main/media/banner.png" alt="git multi profile banner"></p>
 
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT) ![Dependencies](https://img.shields.io/librariesio/release/npm/git-multi-profile?style=for-the-badge) ![Downloads](https://img.shields.io/npm/dw/git-multi-profile?style=for-the-badge&color=a8d4da)
 
 A command-line utility to easily work with multiple git accounts.
 
