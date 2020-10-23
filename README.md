@@ -100,6 +100,8 @@ This will perform a `git clone` operation for the specified repo and update the 
 git-init work git@github.com:MyCompany/some-repo.git
 ```
 
+> From the command-line, you are using the **shell script command**, not the NodeJS library directly
+
 Additional Resources
 --------------------
 - **Add SSH Key to Gitlab**
