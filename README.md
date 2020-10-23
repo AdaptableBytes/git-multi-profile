@@ -1,24 +1,24 @@
-## git-multi-profile
+<p align="center"><img src="https://raw.githubusercontent.com/AdaptableBytes/git-multi-profile/main/media/banner.png" alt="git multi profile banner"></p>
 
-Easily work with multiple git accounts.
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Automatically use the correct SSH key and user profile for git operations without having to remember any extra steps. Once configured, it just works. 
+A command-line utility to easily work with multiple git accounts.
+
+Automatically use the correct SSH key and user profile for git operations without having to remember any extra steps. Once configured, it just works. Easy peasy 🍋
 
 No more cases of mistaken identity or "Permission Denied" when trying to access a repo when you have multiple git accounts.
 
 The following configuration was done on MacOS
 
------------------
-1. Installation
+Installation
 -----------------
 ```shell
 npm i -g git-multi-profile
 ```
 
-📌 Note: Global install is important here since this will be used outside the scope of any individual NodeJS project
+> Global install is important here since this will be used outside the scope of any individual NodeJS project
 
------------------
-2. Set up
+Set up
 -----------------
 ```shell
 # Download shell script
@@ -28,12 +28,11 @@ curl -Lo git-init https://raw.githubusercontent.com/AdaptableBytes/git-multi-pro
 sudo cp git-init /usr/local/bin && sudo chmod +x /usr/local/bin/git-init
 ```
 
------------------
-3. Configure
+Config
 -----------------
 Create a new config file in user home directory with your account info. 
 
-📌 This file is used exclusively by `git-multi-profile` so there is no risk for conflicts or disrupting existing git functionality.
+> This file is used exclusively by `git-multi-profile` so there is no risk for conflicts or disrupting existing git functionality.
 
 `~/.git-profiles.json`
 ```
@@ -63,7 +62,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_work -C "your-work-email@example.com"
 
 **Add your SSH Key to your Github account**
 
-https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+[Github Doc](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
 **Configure Local SSH Key Mapping**
 
@@ -86,8 +85,7 @@ Host work.github.com
 ```
 
 
--------------------
-4. Usage
+Usage
 -------------------
 **Use the following command in place of the usual `git clone` command**
 
@@ -102,8 +100,7 @@ This will perform a `git clone` operation for the specified repo and update the 
 git-init work git@github.com:MyCompany/some-repo.git
 ```
 
---------------------
-5. Additional Resources
+Additional Resources
 --------------------
 - **Add SSH Key to Gitlab**
 https://docs.gitlab.com/ee/ssh/README.html#adding-an-ssh-key-to-your-gitlab-account
@@ -112,12 +109,11 @@ https://docs.gitlab.com/ee/ssh/README.html#adding-an-ssh-key-to-your-gitlab-acco
 https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/
 
 
---------------------
-6. FAQ
+ FAQ
 --------------------
 **What does `git-multi-profile` do with SSH keys?**
 
-Nothing. The core functionality is with `git` and `ssh`. `git-multi-profile` simply maps the hostname to a configured git profile and then invokes `git` which in turn uses `ssh` for communication
+Nothing. The core functionality is performed by `git` and `ssh`. `git-multi-profile` is a thin wrapper that maps the hostname to a configured git profile and then invokes `git` which in turn uses `ssh` for communication
 
 **Will `git-multi-profile` work with Bitbucket, Gitlab, other?**
 
