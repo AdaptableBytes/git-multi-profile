@@ -22,10 +22,10 @@ Set up
 -----------------
 ```shell
 # Download shell script
-curl -Lo git-init https://raw.githubusercontent.com/AdaptableBytes/git-multi-profile/main/shell-scripts/git-init
+curl -Lo git-clone https://raw.githubusercontent.com/AdaptableBytes/git-multi-profile/main/shell-scripts/git-clone
 
 # Make available as shell command
-sudo cp git-init /usr/local/bin && sudo chmod +x /usr/local/bin/git-init
+sudo cp git-clone /usr/local/bin && sudo chmod +x /usr/local/bin/git-clone
 ```
 
 Config
@@ -90,14 +90,14 @@ Usage
 **Use the following command in place of the usual `git clone` command**
 
 ```shell
-git-init {PROFILE} {GIT_REPO_SSH_URL}
+git-clone {PROFILE} {GIT_REPO_SSH_URL}
 ```
 
 This will perform a `git clone` operation for the specified repo and update the local `.git/config` with the profile user
 
 **Example**
 ```shell
-git-init work git@github.com:MyCompany/some-repo.git
+git-clone work git@github.com:MyCompany/some-repo.git
 ```
 
 > From the command-line, you are using the **shell script command**, not the NodeJS library directly
@@ -120,3 +120,20 @@ Nothing. The core functionality is performed by `git` and `ssh`. `git-multi-prof
 **Will `git-multi-profile` work with Bitbucket, Gitlab, other?**
 
 Yes. This works with any `git` provider assuming they are utilizing the standard protocols
+
+**Help! The command says "cloning..." but just hangs.**
+
+This is likely because you don't have the Git provider in your ssh known-hosts file, and an ssh prompt is waiting for input. This is annoying, but a necessary security check.
+
+To solve this you could run `ssh` command to the hostname like so (of course enter the actual git provider hostname and port, which is usually 22):
+```
+ssh git@source.developers.google.com -p 2022
+```
+which will generate the prompt like this:
+```
+The authenticity of host '[source.developers.google.com]:2022 ([xx.xx.xx.255]:2022)' can't be established.
+ECDSA key fingerprint is SHA256:AGmEpqXNMqsRPIviwyk4J4HM0lEylomDBKOWZsBb434.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+Say "yes" which will add the host to your known-hosts file.
+

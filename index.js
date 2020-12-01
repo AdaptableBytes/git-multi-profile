@@ -5,15 +5,10 @@ const gitUrlParse = require('git-url-parse');
 const commandLine = require('./lib/parse-command-line');
 const FileHelper = require('./lib/utilities/file-helper');
 const ProfileManager = require('./lib/profile-manager');
+const formatUrl = require('./lib/format-url');
 
 function quit(exitCode = 0) {
   process.exit(exitCode);
-}
-
-function formatUrl(repo, profile) {
-  let hostname = profile.hostprefix ? `${profile.hostprefix}.` : '';
-  let repoPath = repo.pathname.startsWith('/') ? repo.pathname.substr(1, repo.pathname.length - 1) : repo.pathname;
-  return `${repo.user}@${hostname}${repo.resource}:${repoPath}`;
 }
 
 module.exports = async function run() { 
@@ -56,6 +51,7 @@ module.exports = async function run() {
 
   if (args.repo) {
     gitInfo = gitUrlParse(args.repo);
+    // console.log(gitInfo);
     modifiedRepo = formatUrl(gitInfo, profile);
   }
 
