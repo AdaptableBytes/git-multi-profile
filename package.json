@@ -1,6 +1,6 @@
 {
   "name": "git-multi-profile",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A command-line utility to easily work with multiple git accounts. Automatically use the correct SSH key and user profile for git operations without having to remember any extra steps.",
   "main": "index.js",
   "bin": "bin/git-multi-profile.js",
