@@ -15,7 +15,7 @@
   "author": "Adaptable Bytes LLC",
   "license": "MIT",
   "dependencies": {
-    "git-url-parse": "^11.4.0",
+    "git-url-parse": "^11.4.4",
     "gitconfig": "^2.0.8"
   },
   "devDependencies": {
