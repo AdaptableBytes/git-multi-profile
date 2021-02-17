@@ -1,6 +1,6 @@
 <p align="center"><img src="media/logo.png" alt="git multi profile banner"></p>
 
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT) ![Dependencies](https://img.shields.io/librariesio/release/npm/git-multi-profile?style=for-the-badge) ![Downloads](https://img.shields.io/npm/dw/git-multi-profile?style=for-the-badge&color=a8d4da)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)![Downloads](https://img.shields.io/npm/dt/git-multi-profile?style=for-the-badge&color=a8d4da)
 
 A command-line utility to easily work with multiple git accounts.
 
@@ -52,7 +52,7 @@ Create a new config file in user home directory with your account info.
 
 **Add/Create SSH Keys**
 
-If you don't already have SSH keys configured for your git accounts, create an SSH key for each profile you set up in `~/git-profiles.json`
+If you don't already have SSH keys configured for your git accounts, create an SSH key for each profile you set up in `~/.git-profiles.json`
 
 ```
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_personal -C "your-email@example.com"
@@ -66,7 +66,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_work -C "your-work-email@example.com"
 
 **Configure Local SSH Key Mapping**
 
-Open `~/.ssh/config` file. Add entries as follows (one for each profile you set up in `~/git-profiles.json`)
+Open `~/.ssh/config` file. Add entries as follows (one for each profile you set up in `~/.git-profiles.json`)
 
 ```shell
 Host personal.github.com
