@@ -19,6 +19,6 @@
     "gitconfig": "^2.0.8"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^27.2.1"
   }
 }
